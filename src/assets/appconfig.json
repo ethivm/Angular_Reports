@@ -1,0 +1,24 @@
+{
+  "remoteServiceBaseUrl": "http://localhost:21021",
+  "reportUrl": "http://desktop-q5t2gqs/ReportServer",
+  "reportFolder": "Reports/",
+  "reportWidth": 300,
+  "reportHeight": 300,
+  "reportToolbar": "true",
+  "reportLanguage": "en-us",
+  "appBaseUrl": "http://localhost:4200",
+  "localeMappings": [
+    {
+      "from": "pt-BR",
+      "to": "pt"
+    },
+    {
+      "from": "zh-CN",
+      "to": "zh"
+    },
+    {
+      "from": "he-IL",
+      "to": "he"
+    }
+  ]
+}

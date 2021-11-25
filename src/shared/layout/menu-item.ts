@@ -1,0 +1,28 @@
+export class MenuItem {
+  id: number;
+  parentId: number;
+  label: string;
+  route: string;
+  icon: string;
+  role:string;
+  permissionName: string;
+  isActive?: boolean;
+  isCollapsed?: boolean;
+  children: MenuItem[];
+
+  constructor(
+    label: string,
+    route: string,
+    icon: string,
+    role: string,
+    permissionName: string = null,
+    children: MenuItem[] = null
+  ) {
+    this.label = label;
+    this.route = route;
+    this.icon = icon;
+    this.role = role;
+    this.permissionName = permissionName;
+    this.children = children;
+  }
+}

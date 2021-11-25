@@ -1,0 +1,40 @@
+﻿<div [@routerTransition]>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row" >
+        <div class="col-12" >
+          <!-- <h1>{{ "About" | localize }}</h1> -->
+          <!-- <h1>Report</h1> -->
+          <label >
+            Report header
+          </label>
+          <select name="ReportValues"  [(ngModel)]="selectedLevel"   class="form-control" (change)="selected()" >  
+            <!-- <option value="undefined" class="ng-star-inserted">Please select Report</option> 
+            <option value="report" class="ng-star-inserted">Report 1 </option>
+            <option value="report1" class="ng-star-inserted">Report 2 </option>
+            <option value="report2" class="ng-star-inserted">Report 3 </option> -->
+            <option *ngFor="let item of data" [ngValue]="item">{{item.text}}</option>
+          </select>  
+          <!-- {{selectedLevel | json}} -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="content px-2">
+    <div class="container-fluid">
+      <ng-container *ngIf="show">
+      <div class="card"  id="divreport"  >
+        <div class="card-body">
+
+          <ssrs-reportviewer [reportserver]="reportServer" [reporturl]="reportUrl"  
+          [language]="language" [width]="width" [height]="height" [toolbar]="toolbar"
+          [showparameters]="showParameters" 
+          >
+        </ssrs-reportviewer>
+
+        </div>
+      </div>
+    </ng-container>
+    </div>
+  </section>
+</div>
